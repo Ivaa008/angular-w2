@@ -27,9 +27,9 @@
   </div>
     
     <!-- <input type="text" placeholder="Enter your rating"> -->
-    <input type="text" [(ngModel)]="currentTitle" placeholder="Edit title">
-    <input type="text" [(ngModel)]="currentAuthor" placeholder="Edit author">
-    <input type="text" [(ngModel)]="currentBlurb" placeholder="Edit blurb">
+    <input type="text" [(ngModel)]="currentTitle" [placeholder]="currentBook.Title">
+    <input type="text" [(ngModel)]="currentAuthor" [placeholder]="currentBook.Author">
+    <input type="text" [(ngModel)]="currentBlurb" [placeholder]="currentBook.Blurb">
     <input type="submit" value="Save Changes" (click)="saveChanges()">
   </div>
   <button (click)="previousBook()">Previous Book</button>
