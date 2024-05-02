@@ -32,6 +32,8 @@
   /* Styles for rating stars */
   .rating {
     margin-bottom: 10px;
+    direction: rtl;
+    text-align: left;
   }
 
   .rating input[type="radio"] {
@@ -40,9 +42,8 @@
 
   .rating label {
     font-size: 30px;
-    color: #ccc;
+    color: silver;
     cursor: pointer;
-    direction: ltr; /* Change the direction to left to right */
   }
 
   .rating label:hover,
