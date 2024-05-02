@@ -38,5 +38,9 @@
   <button (click)="nextBook()">Next Book</button>
   <input type="text" [value]="averageRating()" readonly>
 
+  <button *ngIf="allBooksRated" (click)="restartRating()">I want to rate them again</button>
+  <button *ngIf="allBooksRated" (click)="stopRating()">No, I'm OK!</button>
+
+
 </body>
 </html>
