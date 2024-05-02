@@ -24,6 +24,11 @@
     margin-bottom: 10px;
   }
 
+  /* Styles for book rating */
+  .book-rating {
+    margin-bottom: 10px;
+  }
+
   /* Styles for rating stars */
   .rating {
     margin-bottom: 10px;
@@ -45,9 +50,9 @@
   color: gold;
 }
 
-  .rating input[type="radio"]:checked ~ label {
+  /* .rating input[type="radio"]:checked ~ label {
     color: gold;
-  }
+  } */
 
   /* Styles for input fields */
   input[type="text"] {
