@@ -122,14 +122,21 @@ rateBook(rating: number) {
   this.numRatings++;
 
   this.averageCurrentRating(rating);
-
+  this.saveChanges();
   this.nextBook();
 }
 
 saveChanges(){
+  if(this.currentTitle !== '')
   this.currentBook.Title = this.currentTitle;
+  if(this.currentBlurb !== '')
   this.currentBook.Blurb = this.currentBlurb;
+  if(this.currentAuthor !== '')
   this.currentBook.Author = this.currentAuthor;
+
+  this.currentTitle = '';
+  this.currentBlurb = '';
+  this.currentAuthor = '';
 }
 
 nextBook(){
