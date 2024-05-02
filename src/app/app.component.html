@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+</head>
+
+<body>
+  <div class="book-container" id="bookContainer">
+    <div class="book-title">{{ Library[index].Title }}</div>
+    <div class="book-author">By {{ Library[index].Author }}</div>
+    <div class="book-blurb">{{ Library[index].Blurb }}</div>
+
+    <div class="rating">
+    <input type="radio" id="star5" name="rating" value="5" (click)="rateBook(5)">
+    <label for="star5">★</label>
+    <input type="radio" id="star4" name="rating" value="4" (click)="rateBook(4)">
+    <label for="star4">★</label>
+    <input type="radio" id="star3" name="rating" value="3" (click)="rateBook(3)">
+    <label for="star3">★</label>
+    <input type="radio" id="star2" name="rating" value="2" (click)="rateBook(2)">
+    <label for="star2">★</label>
+    <input type="radio" id="star1" name="rating" value="1" (click)="rateBook(1)">
+    <label for="star1">★</label>
+  </div>
+    
+    <!-- <input type="text" placeholder="Enter your rating"> -->
+    <input type="text" [(ngModel)]="currentTitle" placeholder="Edit title">
+    <input type="text" [(ngModel)]="currentAuthor" placeholder="Edit author">
+    <input type="text" [(ngModel)]="currentBlurb" placeholder="Edit blurb">
+    <input type="submit" value="Save Changes" (click)="saveChanges()">
+  </div>
+  <button (click)="previousBook()">Previous Book</button>
+  <button (click)="nextBook()">Next Book</button>
+  <input type="text" [value]="averageRating()" readonly>
+
+</body>
+</html>
